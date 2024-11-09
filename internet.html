@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Agency</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Welcome to ExploreMore Travel Agency</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#calculator">Trip Cost Calculator</a>
+            <a href="#contact">Contact Us</a>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h2>Your Adventure Starts Here</h2>
+        <p>Explore our destinations and find the perfect trip for you.</p>
+    </section>
+
+    <!-- Trip Cost Calculator -->
+    <section id="calculator">
+        <h2>Trip Cost Calculator</h2>
+        <form id="costCalculatorForm">
+            <label for="destination">Destination:</label>
+            <select id="destination" name="destination">
+                <option value="paris">Paris</option>
+                <option value="newyork">New York</option>
+                <option value="tokyo">Tokyo</option>
+            </select>
+
+            <label for="travelers">Number of Travelers:</label>
+            <input type="number" id="travelers" name="travelers" min="1" value="1">
+
+            <label for="accommodation">Accommodation Type:</label>
+            <select id="accommodation" name="accommodation">
+                <option value="budget">Budget</option>
+                <option value="midrange">Mid-Range</option>
+                <option value="luxury">Luxury</option>
+            </select>
+
+            <label for="transport">Transportation:</label>
+            <select id="transport" name="transport">
+                <option value="flight">Flight</option>
+                <option value="bus">Bus</option>
+                <option value="car">Car</option>
+            </select>
+
+            <button type="button" onclick="calculateCost()">Get Estimate</button>
+        </form>
+
+        <p id="estimate">Estimated Cost: $0</p>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="inquiry">Inquiry:</label>
+            <textarea id="inquiry" name="inquiry" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
